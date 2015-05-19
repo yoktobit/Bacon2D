@@ -64,49 +64,49 @@ void Plugins::registerTypes(const char *uri)
 {
     Q_UNUSED(uri)
 
-    qmlRegisterType<Layer>("Bacon2D", 1, 0, "Layer");
-    qmlRegisterUncreatableType<Behavior>("Bacon2D", 1, 0, "Bacon2DBehavior", "Don't use Bacon2DBehavior directly, use one specialized behavior");
-    qmlRegisterUncreatableType<Bacon2D>("Bacon2D", 1, 0, "Bacon2D", "Not creatable as an object, use only to access enums");
+    qmlRegisterType<Layer>("harbour.minerminingmines", 1, 0, "Layer");
+    qmlRegisterUncreatableType<Behavior>("harbour.minerminingmines", 1, 0, "Bacon2DBehavior", "Don't use Bacon2DBehavior directly, use one specialized behavior");
+    qmlRegisterUncreatableType<Bacon2D>("harbour.minerminingmines", 1, 0, "Bacon2D", "Not creatable as an object, use only to access enums");
 
-    qmlRegisterType<Game>("Bacon2D", 1, 0, "Game");
-    qmlRegisterType<Scene>("Bacon2D", 1, 0, "Scene");
-    qmlRegisterType<Entity>("Bacon2D", 1, 0, "Entity");
-    qmlRegisterType<Sprite>("Bacon2D", 1, 0, "Sprite");
-    qmlRegisterType<SpriteAnimation>("Bacon2D", 1, 0, "SpriteAnimation");
-    qmlRegisterType<ImageLayer>("Bacon2D", 1, 0, "ImageLayer");
-    qmlRegisterType<Viewport>("Bacon2D", 1, 0, "Viewport");
-    qmlRegisterType<ScriptBehavior>("Bacon2D", 1, 0, "ScriptBehavior");
-    qmlRegisterType<Settings>("Bacon2D", 1, 0, "Settings");
-    qmlRegisterType<ScrollBehavior>("Bacon2D", 1, 0, "ScrollBehavior");
+    qmlRegisterType<Game>("harbour.minerminingmines", 1, 0, "Game");
+    qmlRegisterType<Scene>("harbour.minerminingmines", 1, 0, "Scene");
+    qmlRegisterType<Entity>("harbour.minerminingmines", 1, 0, "Entity");
+    qmlRegisterType<Sprite>("harbour.minerminingmines", 1, 0, "Sprite");
+    qmlRegisterType<SpriteAnimation>("harbour.minerminingmines", 1, 0, "SpriteAnimation");
+    qmlRegisterType<ImageLayer>("harbour.minerminingmines", 1, 0, "ImageLayer");
+    qmlRegisterType<Viewport>("harbour.minerminingmines", 1, 0, "Viewport");
+    qmlRegisterType<ScriptBehavior>("harbour.minerminingmines", 1, 0, "ScriptBehavior");
+    qmlRegisterType<Settings>("harbour.minerminingmines", 1, 0, "Settings");
+    qmlRegisterType<ScrollBehavior>("harbour.minerminingmines", 1, 0, "ScrollBehavior");
 
-    qmlRegisterUncreatableType<Box2DWorld>("Bacon2D", 1, 0, "World",
+    qmlRegisterUncreatableType<Box2DWorld>("harbour.minerminingmines", 1, 0, "World",
                                            QStringLiteral("World created by Scene if physics is enabled"));
-    qmlRegisterUncreatableType<Box2DBody>("Bacon2D", 1, 0, "Body",
+    qmlRegisterUncreatableType<Box2DBody>("harbour.minerminingmines", 1, 0, "Body",
                                           QStringLiteral("Body is the base class for Entity"));
-    qmlRegisterUncreatableType<Box2DFixture>("Bacon2D", 1, 0, "Fixture",
+    qmlRegisterUncreatableType<Box2DFixture>("harbour.minerminingmines", 1, 0, "Fixture",
                                              QStringLiteral("Base type for Box, Circle etc."));
-    qmlRegisterType<Box2DBody>("Bacon2D", 1, 0, "Body");
-    qmlRegisterType<Box2DBox>("Bacon2D", 1, 0, "Box");
-    qmlRegisterType<Box2DCircle>("Bacon2D", 1, 0, "Circle");
-    qmlRegisterType<Box2DPolygon>("Bacon2D", 1, 0, "Polygon");
-    qmlRegisterType<Box2DChain>("Bacon2D", 1, 0, "Chain");
-    qmlRegisterType<Box2DEdge>("Bacon2D", 1, 0, "Edge");
-    qmlRegisterUncreatableType<Box2DDebugDraw>("Bacon2D", 1, 0, "DebugDraw",
+    qmlRegisterType<Box2DBody>("harbour.minerminingmines", 1, 0, "Body");
+    qmlRegisterType<Box2DBox>("harbour.minerminingmines", 1, 0, "Box");
+    qmlRegisterType<Box2DCircle>("harbour.minerminingmines", 1, 0, "Circle");
+    qmlRegisterType<Box2DPolygon>("harbour.minerminingmines", 1, 0, "Polygon");
+    qmlRegisterType<Box2DChain>("harbour.minerminingmines", 1, 0, "Chain");
+    qmlRegisterType<Box2DEdge>("harbour.minerminingmines", 1, 0, "Edge");
+    qmlRegisterUncreatableType<Box2DDebugDraw>("harbour.minerminingmines", 1, 0, "DebugDraw",
                                                QStringLiteral("DebugDraw created by Scene if physics and debug is enabled"));
-    qmlRegisterUncreatableType<Box2DJoint>("Bacon2D", 1, 0, "Joint",
+    qmlRegisterUncreatableType<Box2DJoint>("harbour.minerminingmines", 1, 0, "Joint",
                                            QStringLiteral("Base type for DistanceJoint, RevoluteJoint etc."));
-    qmlRegisterType<Box2DDistanceJoint>("Bacon2D", 1, 0, "DistanceJoint");
-    qmlRegisterType<Box2DPrismaticJoint>("Bacon2D", 1, 0, "PrismaticJoint");
-    qmlRegisterType<Box2DRevoluteJoint>("Bacon2D", 1, 0, "RevoluteJoint");
-    qmlRegisterType<Box2DMotorJoint>("Bacon2D", 1, 0, "MotorJoint");
-    qmlRegisterType<Box2DWeldJoint>("Bacon2D", 1, 0, "WeldJoint");
-    qmlRegisterType<Box2DPulleyJoint>("Bacon2D", 1, 0, "PulleyJoint");
-    qmlRegisterType<Box2DFrictionJoint>("Bacon2D", 1, 0, "FrictionJoint");
-    qmlRegisterType<Box2DWheelJoint>("Bacon2D", 1, 0, "WheelJoint");
-    qmlRegisterType<Box2DMouseJoint>("Bacon2D", 1, 0, "MouseJoint");
-    qmlRegisterType<Box2DGearJoint>("Bacon2D", 1, 0, "GearJoint");
-    qmlRegisterType<Box2DRopeJoint>("Bacon2D", 1, 0, "RopeJoint");
-    qmlRegisterType<Box2DRayCast>("Bacon2D", 1, 0, "RayCast");
+    qmlRegisterType<Box2DDistanceJoint>("harbour.minerminingmines", 1, 0, "DistanceJoint");
+    qmlRegisterType<Box2DPrismaticJoint>("harbour.minerminingmines", 1, 0, "PrismaticJoint");
+    qmlRegisterType<Box2DRevoluteJoint>("harbour.minerminingmines", 1, 0, "RevoluteJoint");
+    qmlRegisterType<Box2DMotorJoint>("harbour.minerminingmines", 1, 0, "MotorJoint");
+    qmlRegisterType<Box2DWeldJoint>("harbour.minerminingmines", 1, 0, "WeldJoint");
+    qmlRegisterType<Box2DPulleyJoint>("harbour.minerminingmines", 1, 0, "PulleyJoint");
+    qmlRegisterType<Box2DFrictionJoint>("harbour.minerminingmines", 1, 0, "FrictionJoint");
+    qmlRegisterType<Box2DWheelJoint>("harbour.minerminingmines", 1, 0, "WheelJoint");
+    qmlRegisterType<Box2DMouseJoint>("harbour.minerminingmines", 1, 0, "MouseJoint");
+    qmlRegisterType<Box2DGearJoint>("harbour.minerminingmines", 1, 0, "GearJoint");
+    qmlRegisterType<Box2DRopeJoint>("harbour.minerminingmines", 1, 0, "RopeJoint");
+    qmlRegisterType<Box2DRayCast>("harbour.minerminingmines", 1, 0, "RayCast");
 
-    qmlRegisterUncreatableType<Box2DContact>("Bacon2D", 1, 0, "Contact", QStringLiteral("Contact class"));
+    qmlRegisterUncreatableType<Box2DContact>("harbour.minerminingmines", 1, 0, "Contact", QStringLiteral("Contact class"));
 }
